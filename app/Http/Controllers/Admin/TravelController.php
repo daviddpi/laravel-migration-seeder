@@ -13,9 +13,10 @@ class TravelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Travel $travels)
     {
-        return view('admin.travels.index');
+        $travels = Travel::all();
+        return view('admin.travels.index', compact("travels"));
     }
 
     /**
