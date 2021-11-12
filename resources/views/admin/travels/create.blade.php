@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
        
-        <form action="" method="POST">
+        <form action="{{ route("admin.travels.store") }}" method="POST">
         @csrf
             <div class="mb-3">
                 <label for="place" class="form-label">Insert Place</label>

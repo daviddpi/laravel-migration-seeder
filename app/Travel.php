@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Travel extends Model
 {
     protected $table = 'travel_controls';
-    protected $fillable = [''];
+    protected $fillable = ['place', 'country', 'description', 'price', 'image_url'];
 }

@@ -37,7 +37,13 @@ class TravelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        
+        $travel = new Travel();
+        $travel->fill($data);
+        $travel->save();
+
+        return redirect()->route("admin.travels.show", $travel->id);
     }
 
     /**

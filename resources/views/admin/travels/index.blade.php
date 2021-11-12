@@ -3,6 +3,8 @@
 @section('content')
     <div class="container">
         <h2>Travels!</h2>
+        <a href="{{ route("admin.travels.create") }}">Create new travel</a>
+
         <div class="row mb-5">            
             @forelse ($travels as $travel)
                 <div class="col-4">
@@ -14,7 +16,7 @@
                     <p>{{ $travel->description }}</p>
                     <h3>{{ $travel->price }}&euro;</h3>
                     <br>
-                    <a href="{{ route("admin.travels.create") }}">Modification</a>
+                    {{-- <a href="{{ route("admin.travels.edit") }}">Modification</a> --}}
                 </div>
             @empty
                 <h4>Non ci sono contenuti da mostrare</h4>
