@@ -13,6 +13,8 @@
                     </a>
                     <p>{{ $travel->description }}</p>
                     <h3>{{ $travel->price }}&euro;</h3>
+                    <br>
+                    <a href="{{ route("admin.travels.create") }}">Modification</a>
                 </div>
             @empty
                 <h4>Non ci sono contenuti da mostrare</h4>
