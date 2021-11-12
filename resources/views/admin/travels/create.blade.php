@@ -24,8 +24,8 @@
                 <input type="number" class="form-control" id="price" name="price" placeholder="Ex 500">
             </div>
             <div class="mb-5">
-                <label for="image" class="form-label">Insert Image</label>
-                <input type="text" class="form-control" id="image" name="image" placeholder="Url ...">
+                <label for="image_url" class="form-label">Insert Image</label>
+                <input type="text" class="form-control" id="image_url" name="image_url" placeholder="Url ...">
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>

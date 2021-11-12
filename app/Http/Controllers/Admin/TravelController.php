@@ -43,7 +43,7 @@ class TravelController extends Controller
         $travel->fill($data);
         $travel->save();
 
-        return redirect()->route("admin.travels.show", $travel->id);
+        return redirect()->route("admin.travels.show", compact("travel"));
     }
 
     /**
