@@ -1,5 +1,6 @@
 <?php
 
+use App\TravelControl;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,7 @@ Route::middleware('auth')
 ->group(function(){
     Route::get('/', 'HomeController@index')
     ->name('home');
+    Route::resource('travels', TravelController::class);
 });
 
 Route::get('/guests.home', 'HomeController@index')->name('guests.home');

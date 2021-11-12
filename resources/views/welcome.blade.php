@@ -40,6 +40,12 @@
                 top: 18px;
             }
 
+            .top-left {
+                position: absolute;
+                left: 10px;
+                top: 18px;
+            }
+
             .content {
                 text-align: center;
             }
@@ -69,6 +75,19 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ route('admin.home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+            @if (Route::has('login'))
+                <div class="top-left links">
+                    @auth
+                        <a href="{{ route('admin.travels.index') }}">Travels</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
